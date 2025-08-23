@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows10 優化版服務</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #2980b9;
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+    }
+    p.intro, ul.intro-list {
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    ul.intro-list li {
+      margin: 8px 0;
+    }
+    .qna button {
+      background: #2980b9;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 8px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .qna button:hover {
+      background: #1c5980;
+    }
+    .qna .answer {
+      display: none;
+      padding: 10px;
+      background: #ecf6fd;
+      border-left: 3px solid #3498db;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #2c3e50;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+    }
+    .qna .q-separator {
+      border-bottom: 1px solid #d0d7de;
+      margin: 8px 0;
+    }
+    .qna button::before {
+      content: '❓ ';
+    }
+    .qna .answer::before {
+      content: '✅ ';
+    }
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .images div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .images img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #ecf0f1;
+    }
+    footer {
+      background: #2980b9;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .images {
+        grid-template-columns: 1fr;
+      }
+      .qna button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💻 Windows10 優化版</h1>
+    <p>專業調整 · 提升效能 · 穩定流暢</p>
+  </header>
+
+  <section>
+    <h2>簡介</h2>
+    <p class="intro">本人親手操刀針對系統進行調整和配置，以提高其效能、穩定性和使用體驗的過程。這包括清理不必要的檔案及內建軟體、調整系統設置、管理啟動項目、更新驅動程序等操作。讓系統運行得更加流暢，減少資源浪費，並提高運行速度。</p>
+
+    <h2>❌ 為什麼沒有 Windows11 優化版？</h2>
+    <ul class="intro-list">
+      <li>優化幅度有限，流暢度不如 Windows10</li>
+      <li>部分遊戲、外掛相容性差</li>
+      <li>許多人會直接降回 Windows10</li>
+    </ul>
+
+    <h2>📌 常見問題 Q&A</h2>
+    <div class="qna">
+      <button>Windows10的版本是什麼？</button>
+      <div class="answer">22h2，最穩定的版本</div>
+      <div class="q-separator"></div>
+
+      <button>重灌要多久？</button>
+      <div class="answer">約 15 分鐘，依電腦效能與硬碟速度而定。</div>
+      <div class="q-separator"></div>
+
+      <button>重灌需要隨身碟嗎？</button>
+      <div class="answer">不用，本工具支援無隨身碟一鍵重灌。</div>
+      <div class="q-separator"></div>
+
+      <button>重灌會不會影響其他磁碟資料？</button>
+      <div class="answer">只會清除 C 槽，其他磁碟不影響。</div>
+      <div class="q-separator"></div>
+
+      <button>如果沒有其他磁碟槽怎麼辦？</button>
+      <div class="answer">會協助遠端新增。</div>
+      <div class="q-separator"></div>
+
+      <button>驅動程式要自己裝嗎？</button>
+      <div class="answer">會自動安裝大部分驅動，若有特殊硬體再手動安裝。</div>
+      <div class="q-separator"></div>
+
+      <button>重灌後會有正版授權嗎？</button>
+      <div class="answer">只要原本有數位授權，會自動啟用。</div>
+      <div class="q-separator"></div>
+
+      <button>要不要先登出微軟帳號？</button>
+      <div class="answer">不用，重灌後重新登入即可。</div>
+      <div class="q-separator"></div>
+
+      <button>桌面檔案會留著嗎？</button>
+      <div class="answer">桌面檔案存在 C 槽，會被清除，建議先備份。</div>
+      <div class="q-separator"></div>
+
+      <button>可以幫忙備份嗎？</button>
+      <div class="answer">可以遠端協助備份資料。</div>
+      <div class="q-separator"></div>
+
+      <button>重灌後可以幫我安裝常用軟體嗎？</button>
+      <div class="answer">可協助安裝常用套件（如Visual、NET3.5、壓縮工具等）。</div>
+      <div class="q-separator"></div>
+
+      <button>我原本有Office會協助安裝嗎？</button>
+      <div class="answer">會的，順便幫你更新。</div>
+      <div class="q-separator"></div>
+    </div>
+
+    <h2>🖼️ 系統介面圖</h2>
+    <div class="images">
+      <div><img src="images/system1.png" alt="系統介面圖1"></div>
+      <div><img src="images/system2.png" alt="系統介面圖2"></div>
+    </div>
+
+    <h2>⭐ 客人回饋圖</h2>
+    <div class="images">
+      <div><img src="images/feedback1.png" alt="客人回饋圖1"></div>
+      <div><img src="images/feedback2.png" alt="客人回饋圖2"></div>
+      <div><img src="images/feedback3.png" alt="客人回饋圖3"></div>
+      <div><img src="images/feedback4.png" alt="客人回饋圖4"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📞 聯絡方式：Line: Depairgp6</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.qna button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
